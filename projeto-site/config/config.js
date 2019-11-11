@@ -7,11 +7,13 @@ module.exports = {
     dialect: "sqlite",
     storage: ":memory:"
   },
+  //Colocar os nossos dados
   production: {
-    username: 'adminbandtec',
-    password: 'b@ndtec2018',
-    database: 'gf2018',
-    host: 'testexyzwtrtwr.database.windows.net',
+    username: 'userluxus',
+    password: '#Gfgrupo4b',
+    database: 'bdluxus',
+    host: 'srvluxus.database.windows.net',
+  //
     dialect: 'mssql',
     xuse_env_variable: 'DATABASE_URL',
     dialectOptions: {

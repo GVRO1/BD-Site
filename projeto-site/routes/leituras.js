@@ -11,12 +11,13 @@ router.get('/ultimas', function(req, res, next) {
 
 	console.log(`Recuperando as últimas ${limite_linhas} leituras`);
 	
+	// alterar  os nomes da tabela de acordo com o nome da tabela e do nome dos campo
+
 	const instrucaoSql = `select top ${limite_linhas} 
-						temperatura, 
-						umidade, 
-						momento,
-						FORMAT(momento,'HH:mm:ss') as momento_grafico 
-						from leitura order by id desc`;
+						luminosidade_externa, 
+						hora,                  
+						FORMAT(hora,'HH:mm:ss') as momento_grafico 
+						from eventos order by idEventos desc`;
 
 	sequelize.query(instrucaoSql, {
 		model: Leitura,
